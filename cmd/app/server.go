@@ -2,10 +2,10 @@ package app
 
 import (
 	"encoding/json"
+	"github.com/sekaiichi/http-temprory/pkg/banners"
 	"log"
 	"net/http"
 	"strconv"
-	"github.com/shahriyora/http/pkg/banners"
 )
 
 //Server .. это наш логический сервер
@@ -62,8 +62,8 @@ func (s *Server) handleGetBannerByID(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	_, err=w.Write(data)
-	if err!=nil {
+	_, err = w.Write(data)
+	if err != nil {
 		log.Print(err)
 	}
 }
@@ -86,8 +86,8 @@ func (s *Server) handleGetAllBanners(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	_, err=w.Write(data)
-	if err!=nil {
+	_, err = w.Write(data)
+	if err != nil {
 		log.Print(err)
 	}
 }
@@ -141,8 +141,8 @@ func (s *Server) handleSaveBanner(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	_, err=w.Write(data)
-	if err!=nil {
+	_, err = w.Write(data)
+	if err != nil {
 		log.Print(err)
 	}
 }
@@ -174,8 +174,8 @@ func (s *Server) handleRemoveByID(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
-	_, err=w.Write(data)
-	if err!=nil {
+	_, err = w.Write(data)
+	if err != nil {
 		log.Print(err)
 	}
 }
